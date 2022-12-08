@@ -1,0 +1,113 @@
+.DS_Store
+*.py[co]
+*.swp
+db/
+*.db
+.idea/
+*.iml
+.vscode
+!**/test*/**/*.json
+*/.Trash*
+
+# Packages
+*.egg
+*.pid
+*.egg-info
+db
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+tags
+.installed.cfg
+
+# Unit test / coverage reports
+.coverage
+.tox
+.eslintcache
+.cache
+
+# functional tests
+functional_tests/screenshots
+functional_tests/venv
+functional_tests/activate-tests
+
+#Translations
+*.mo
+
+#Bundler
+.bundle/vendor
+
+#NPM
+npm-debug.log*
+
+logs/*
+venv/*
+venv3/*
+settings/tornado_dev.py
+/activate-*
+# Django cms website
+www/settings/version.py
+www/assets/static/js/master.*.js
+www/assets/static/css/master.*.css
+
+# IntelliJ
+.idea/scopes/
+.idea/workspace.xml
+
+#sass
+.sass-cache/
+
+# Grunt / NPM / Yarn
+node_modules/
+bower_components/
+npm-debug.log
+yarn-error.log
+storybook-static/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+get-pip.py
+get-pip.py.1
+src/pip-delete-this-directory.txt
+deploy.zip
+deploy/deploy.sh
+deploy/tornado_deployed.py
+
+# Misc
+launch.log
+deploy/*.zip
+deploy/.elasticbeanstalk/logs*
+deploy/Dockerfile
+deploy/_deployed_settings.py
+deploy/version.py
+deploy/build-info.properties
+static/*
+search_index/*
+alley/*
+docs/*
+interviews/*
+coverage/*
+
+#Media Folders
+media/*
+
+# Ruby
+Gemfile
+Gemfile.lock
+.bundle/config
+.stylelintcache
+.eslintcache
+
+temp.text
+
+cypress/videos
+cypress/screenshots
+cypress/recordings
+cypress.env.json
+cypress/downloads
