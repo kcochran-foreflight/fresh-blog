@@ -87,7 +87,6 @@ deploy/Dockerfile
 deploy/_deployed_settings.py
 deploy/version.py
 deploy/build-info.properties
-static/*
 search_index/*
 alley/*
 docs/*
