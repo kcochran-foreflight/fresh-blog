@@ -1,25 +1,31 @@
-import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
+import { Handler, Handlers, PageProps } from "$fresh/server.ts";
+import { Author, Post } from "blog/types.ts";
+import { laserTagPosts } from "blog/posts.ts"
 
-export default function Home() {
+export const handler: Handlers<Post[]> = {
+  GET: async (req, ctx) => {
+    const posts: Post[] = laserTagPosts
+    const res = await ctx.render(posts);
+    return res;
+  },
+};
+
+export default function Home(props: PageProps<Post[]>) {
   return (
     <>
-      <Head>
-        <title>Fresh App</title>
-      </Head>
-      <div>
-        <img
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p>
-          Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
-        </p>
-        <Counter start={3} />
-      </div>
+      <header>
+        Welcome to my super cool blog!
+      </header>
+      <ul>
+        {props.data.map((p) => (
+          <li>
+            <a href={`/post/${p.id}`}>{p.title}</a>
+          </li>
+        ))}
+      </ul>
+      <h3>Here, play with a counter</h3>
+      <Counter start={0} />
     </>
   );
 }
